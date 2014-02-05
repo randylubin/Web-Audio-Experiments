@@ -37,6 +37,9 @@ function OscCtrl($scope){
 		$scope.oscillators.push(oscillator);
 		oscCount += 1;
 	}
+
+
+	// The following modified from http://www.createjs.com/#!/EaselJS/demos/dragdrop
 	var canvas, stage;
 
 	var mouseTarget;	// the display object currently under the mouse, or being dragged
