@@ -1,16 +1,20 @@
-<html ng-app>
+<html ng-app="webAudioExp">
 <head>
-	<script src="oscApp.js"></script>
 	<script src="angular.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
 	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
 	<style>body{font-family:"Comic Sans MS", cursive, sans-serif;}</style>
+
+	<script src="oscApp.js"></script>
 </head>
 <body>
-	<div ng-controller="OscCtrl">
-		<h3>Much theremin, very tone, such pan... WOW</h3>
-		<div id="loader"></div>
-		<canvas style="background-color: steelblue" id="testCanvas" width="450" height="300"></canvas>
-		<h4>Drag Doge around; height is tone, width is pan</h4>
+	<div ng-controller="navBar">
+		<div>A (growing) collection of web audio experiments:</div>
+		<span ng-click="goto('theremin')">Theremin</span> | 
+		<span ng-click="goto('binaural')">Binaural</span>
+	</div>
+	<div ng-view>
 	</div>
 </body>
 </html>
