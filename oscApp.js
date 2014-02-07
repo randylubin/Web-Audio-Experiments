@@ -38,21 +38,8 @@ webAudioExp.controller('ThereminCtrl', ['$scope',
 
 		}
 
-<<<<<<< HEAD
-	$scope.newOsc = function(){
-		var name = 'oscillator ' + oscCount;
-		var oscillator = new Oscillator(name);
-		$scope.oscillators.push(oscillator);
-		oscCount += 1;
-	}
-
-
-	// The following modified from http://www.createjs.com/#!/EaselJS/demos/dragdrop
-	var canvas, stage;
-=======
 		var oscillator0 = new Oscillator('oscillator 0');
 		var oscCount = 1;
->>>>>>> master
 
 		$scope.oscillators = [
 			oscillator0
@@ -68,6 +55,9 @@ webAudioExp.controller('ThereminCtrl', ['$scope',
 			$scope.oscillators.push(oscillator);
 			oscCount += 1;
 		}
+
+		// The following modified from http://www.createjs.com/#!/EaselJS/demos/dragdrop
+		
 		var canvas, stage;
 
 		var mouseTarget;	// the display object currently under the mouse, or being dragged
@@ -114,7 +104,7 @@ webAudioExp.controller('ThereminCtrl', ['$scope',
 				container.addChild(bitmap);
 				bitmap.x = (canvas.width * Math.random()|0) * .8 + 50;
 				bitmap.y = (canvas.height * Math.random()|0)* .8 + 50;
-				
+
 				$scope.oscillators[0].osc.frequency.value = (bitmap.y * 2) + 100;
 				var normX = 100* (bitmap.x / canvas.width) - 50;
 				$scope.oscillators[0].pan.setPosition(normX,10,-.5)//evt.stageX * 2;
@@ -278,7 +268,7 @@ webAudioExp.controller('BinauralCtrl', ['$scope',
 				// the pressmove event is dispatched when the mouse moves after a mousedown on the target until the mouse is released.
 				bitmap.on("pressmove", function(evt) {
 					this.x = evt.stageX+ this.offset.x;
-					
+
 					// indicate that the stage should be updated on the next tick:
 					update = true;
 
@@ -327,4 +317,3 @@ function navBar($scope){
 		window.location = '/#/' + location;
 	}
 }
-
