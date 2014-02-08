@@ -314,6 +314,6 @@ webAudioExp.controller('HomePageCtrl', ['$scope',
 
 function navBar($scope){
 	$scope.goto = function(location){
-		window.location = '/#/' + location;
+		window.location = '/Web-Audio-Experiments/#/' + location;
 	}
 }
