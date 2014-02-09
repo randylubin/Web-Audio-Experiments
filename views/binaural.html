@@ -1,0 +1,13 @@
+<h3>Much entrainment, very frequency... WOW</h3>
+<div id="loader"></div>
+<canvas style="background-color: steelblue" id="testCanvas" width="450" height="75"></canvas>
+<h4>Slide Doge to change the perceived frequency <button ng-click="play()" ng-disabled="playing == false">Pause</button></h4>
+<p>Make sure to wear headphones - tone is very low</p>
+
+<h3>Frequency: {{oscHigh.frequency.value - oscLow.frequency.value}}hz - 
+	<span ng-show="(oscHigh.frequency.value - oscLow.frequency.value) >= 13">Such excitement</span>
+	<span ng-show="(oscHigh.frequency.value - oscLow.frequency.value) < 13 && (oscHigh.frequency.value - oscLow.frequency.value) > 7">Much relax</span>
+	<span ng-show="(oscHigh.frequency.value - oscLow.frequency.value) <= 7">Very meditative</span>
+</h3>
+
+<div>See: <a href="http://en.wikipedia.org/wiki/Brainwave_synchronization">Brainwave Entrainment</a></div>
